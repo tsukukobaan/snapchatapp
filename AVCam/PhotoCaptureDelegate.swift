@@ -23,6 +23,8 @@ class PhotoCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
 	private var photoData: Data? = nil
 	
 	private var livePhotoCompanionMovieURL: URL? = nil
+    
+    private weak var cameraVC: CameraViewController!
 
 	init(with requestedPhotoSettings: AVCapturePhotoSettings, willCapturePhotoAnimation: @escaping () -> (), capturingLivePhoto: @escaping (Bool) -> (), completed: @escaping (PhotoCaptureDelegate) -> ()) {
 		self.requestedPhotoSettings = requestedPhotoSettings
@@ -59,9 +61,16 @@ class PhotoCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
     func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
 		if let photoSampleBuffer = photoSampleBuffer {
             photoData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer)
+            
+            
+            cameraVC.snapshotTaken(photoData)
+            //snapshotTaken(photoData)
 		}
 		else {
 			print("Error capturing photo: \(error)")
+            
+            cameraVC.snapshotFailed()
+            //snapshotFailed()
 			return
 		}
 	}
@@ -118,4 +127,7 @@ class PhotoCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
 			}
 		}
 	}
+    
+    
+    
 }

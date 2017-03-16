@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OMe-cm-Nyb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -162,7 +162,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RBv-52-iBq">
-                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="TIG-Do-uIV" customClass="UserCell" customModule="AVCam" customModuleProvider="target">
@@ -195,20 +195,41 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KmD-XL-ol2">
-                                <rect key="frame" x="0.0" y="26" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Ecc-py-EX6"/>
+                                </constraints>
                                 <color key="barTintColor" red="0.28627450980000002" green="0.4039215686" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYh-bW-qq0">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CwH-eH-77P"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Send a Pull Requests" id="qpN-nd-mMD">
+                                        <barButtonItem key="rightBarButtonItem" image="send_snap" id="LfQ-Ys-rxW">
+                                            <connections>
+                                                <action selector="sendPRButtonPressed:" destination="OMe-cm-Nyb" id="dD4-77-8Op"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="KmD-XL-ol2" secondAttribute="trailing" id="00o-mK-Ycb"/>
-                            <constraint firstItem="5yd-C3-eRI" firstAttribute="top" secondItem="RBv-52-iBq" secondAttribute="bottom" id="9yl-vQ-0ON"/>
-                            <constraint firstItem="RBv-52-iBq" firstAttribute="leading" secondItem="Tfd-Kp-Bpd" secondAttribute="leading" id="DaQ-ml-1Y5"/>
-                            <constraint firstItem="KmD-XL-ol2" firstAttribute="leading" secondItem="Tfd-Kp-Bpd" secondAttribute="leading" id="KjK-WP-BgI"/>
-                            <constraint firstItem="KmD-XL-ol2" firstAttribute="top" secondItem="VlA-rh-LyI" secondAttribute="bottom" constant="6" id="dQe-JV-fPE"/>
-                            <constraint firstAttribute="trailing" secondItem="RBv-52-iBq" secondAttribute="trailing" id="fu6-8D-5lZ"/>
-                            <constraint firstItem="RBv-52-iBq" firstAttribute="top" secondItem="KmD-XL-ol2" secondAttribute="bottom" id="zB9-73-aXg"/>
+                            <constraint firstAttribute="trailing" secondItem="rYh-bW-qq0" secondAttribute="trailing" id="Ecs-O3-ykA"/>
+                            <constraint firstAttribute="trailing" secondItem="KmD-XL-ol2" secondAttribute="trailing" id="GPJ-H4-j94"/>
+                            <constraint firstItem="RBv-52-iBq" firstAttribute="leading" secondItem="Tfd-Kp-Bpd" secondAttribute="leading" id="HZH-vc-YvS"/>
+                            <constraint firstAttribute="trailing" secondItem="RBv-52-iBq" secondAttribute="trailing" id="J5m-H6-ZJz"/>
+                            <constraint firstItem="RBv-52-iBq" firstAttribute="top" secondItem="KmD-XL-ol2" secondAttribute="bottom" id="VxJ-Zy-MaG"/>
+                            <constraint firstItem="KmD-XL-ol2" firstAttribute="leading" secondItem="Tfd-Kp-Bpd" secondAttribute="leading" id="Wmt-Gv-fwu"/>
+                            <constraint firstItem="KmD-XL-ol2" firstAttribute="top" secondItem="rYh-bW-qq0" secondAttribute="bottom" id="aUF-3Q-n3s"/>
+                            <constraint firstItem="rYh-bW-qq0" firstAttribute="leading" secondItem="Tfd-Kp-Bpd" secondAttribute="leading" id="j4d-LS-C8Z"/>
+                            <constraint firstItem="5yd-C3-eRI" firstAttribute="top" secondItem="RBv-52-iBq" secondAttribute="bottom" id="n1B-4K-YLt"/>
+                            <constraint firstItem="rYh-bW-qq0" firstAttribute="top" secondItem="Tfd-Kp-Bpd" secondAttribute="top" constant="20" id="vYt-vX-Ul4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -217,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0e-qc-6vF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="869.60000000000002" y="-630.13493253373315"/>
+            <point key="canvasLocation" x="-658.39999999999998" y="-1299.400299850075"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -400,6 +421,7 @@
                         <outlet property="recordButton" destination="eRT-dK-6dM" id="iqk-en-NsW"/>
                         <outlet property="resumeButton" destination="FZr-Ip-7WL" id="tX5-Sx-rQK"/>
                         <segue destination="Qzc-8q-vOa" kind="presentation" identifier="LoginVC" id="tVq-0D-bxb"/>
+                        <segue destination="OMe-cm-Nyb" kind="show" identifier="UsersVC" id="bPK-eC-dvC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -415,6 +437,7 @@
     <resources>
         <image name="devslopes" width="1080" height="1349"/>
         <image name="devslopes-mountains-white" width="451" height="335"/>
+        <image name="send_snap" width="24" height="23"/>
     </resources>
     <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
