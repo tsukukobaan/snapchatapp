@@ -121,6 +121,7 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     print("Error uploading video: \(err?.localizedDescription)")
                 } else {
                     let downloadURL = meta!.downloadURL()
+                    DataService.instance.sendMediaPullRequest(senderUID: FIRAuth.auth()!.currentUser!.uid, sendingTo: self.selectedUsers, mediaURL: downloadURL!, textSnippet: "Coding today was legit")
                     self.dismiss(animated: true, completion: nil)
                     
                 }
