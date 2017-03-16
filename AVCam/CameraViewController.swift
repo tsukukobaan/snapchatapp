@@ -11,6 +11,17 @@ import AVFoundation
 import Photos
 
 class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
+    
+    
+    @IBOutlet private weak var previewView: PreviewView!
+    @IBOutlet private weak var captureModeControl: UISegmentedControl!
+    @IBOutlet private weak var cameraButton: UIButton!
+    @IBOutlet private weak var cameraUnavailableLabel: UILabel!
+    @IBOutlet private weak var recordButton: UIButton!
+    @IBOutlet private weak var resumeButton: UIButton!
+    @IBOutlet private weak var photoButton: UIButton!
+    @IBOutlet private weak var livePhotoModeButton: UIButton!
+    @IBOutlet var capturingLivePhotoLabel: UILabel!
 	// MARK: View Controller Life Cycle
 	
     override func viewDidLoad() {
@@ -163,7 +174,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 	
 	var videoDeviceInput: AVCaptureDeviceInput!
 	
-	@IBOutlet private weak var previewView: PreviewView!
+
 	
 	// Call this on the session queue.
 	private func configureSession() {
@@ -307,7 +318,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 		case movie = 1
 	}
 
-	@IBOutlet private weak var captureModeControl: UISegmentedControl!
+	
 	
 	@IBAction private func toggleCaptureMode(_ captureModeControl: UISegmentedControl) {
 		if captureModeControl.selectedSegmentIndex == CaptureMode.photo.rawValue {
@@ -366,9 +377,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 	
 	// MARK: Device Configuration
 	
-	@IBOutlet private weak var cameraButton: UIButton!
 	
-	@IBOutlet private weak var cameraUnavailableLabel: UILabel!
 	
 	private let videoDeviceDiscoverySession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera, .builtInDuoCamera], mediaType: AVMediaTypeVideo, position: .unspecified)!
 	
@@ -500,7 +509,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 	
 	private var inProgressPhotoCaptureDelegates = [Int64 : PhotoCaptureDelegate]()
 	
-	@IBOutlet private weak var photoButton: UIButton!
+	
 	
 	@IBAction private func capturePhoto(_ photoButton: UIButton) {
 		/*
@@ -589,7 +598,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 	
 	private var livePhotoMode: LivePhotoMode = .off
 	
-	@IBOutlet private weak var livePhotoModeButton: UIButton!
+	
 	
 	@IBAction private func toggleLivePhotoMode(_ livePhotoModeButton: UIButton) {
 		sessionQueue.async { [unowned self] in
@@ -609,7 +618,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 	
 	private var inProgressLivePhotoCapturesCount = 0
 	
-	@IBOutlet var capturingLivePhotoLabel: UILabel!
+	
 	
 	// MARK: Recording Movies
 	
@@ -617,9 +626,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 	
 	private var backgroundRecordingID: UIBackgroundTaskIdentifier? = nil
 	
-	@IBOutlet private weak var recordButton: UIButton!
 	
-	@IBOutlet private weak var resumeButton: UIButton!
 	
 	@IBAction private func toggleMovieRecording(_ recordButton: UIButton) {
 		guard let movieFileOutput = self.movieFileOutput else {

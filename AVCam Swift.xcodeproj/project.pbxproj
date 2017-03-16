@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34A3E10F1E7A7303006916A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34A3E10E1E7A7303006916A8 /* GoogleService-Info.plist */; };
 		7AA677151CFF765600B353FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA677141CFF765600B353FB /* AppDelegate.swift */; };
 		7AA677171CFF765600B353FB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA677161CFF765600B353FB /* CameraViewController.swift */; };
 		7AA6771A1CFF765600B353FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA677181CFF765600B353FB /* Main.storyboard */; };
@@ -14,9 +15,13 @@
 		7AA6771F1CFF765600B353FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA6771D1CFF765600B353FB /* LaunchScreen.storyboard */; };
 		7AA677271CFF774800B353FB /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA677261CFF774800B353FB /* PhotoCaptureDelegate.swift */; };
 		7AA677291CFF7B5C00B353FB /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA677281CFF7B5C00B353FB /* PreviewView.swift */; };
+		D9240A37F3C10334B5E3BFD9 /* Pods_AVCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B68A9C3CA81B9C09A1164B0 /* Pods_AVCam.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07EC6DBE9156687B76A6205F /* Pods-AVCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AVCam/Pods-AVCam.debug.xcconfig"; sourceTree = "<group>"; };
+		2B68A9C3CA81B9C09A1164B0 /* Pods_AVCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34A3E10E1E7A7303006916A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7AA677111CFF765600B353FB /* AVCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA677141CFF765600B353FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AA677161CFF765600B353FB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +31,7 @@
 		7AA677201CFF765600B353FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AA677261CFF774800B353FB /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		7AA677281CFF7B5C00B353FB /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
-		7AE4754E1D00FFA900C2CB9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F191CC149B40915834564458 /* Pods-AVCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCam.release.xcconfig"; path = "Pods/Target Support Files/Pods-AVCam/Pods-AVCam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,18 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9240A37F3C10334B5E3BFD9 /* Pods_AVCam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7815AF80F7BC7228E93F59FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B68A9C3CA81B9C09A1164B0 /* Pods_AVCam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7AA677081CFF765500B353FB = {
 			isa = PBXGroup;
 			children = (
-				7AE4754E1D00FFA900C2CB9E /* README.md */,
 				7AA677131CFF765600B353FB /* AVCam */,
 				7AA677121CFF765600B353FB /* Products */,
+				EA8DB690FDBD98683E04D454 /* Pods */,
+				7815AF80F7BC7228E93F59FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,8 +83,18 @@
 				7AA6771B1CFF765600B353FB /* Assets.xcassets */,
 				7AA6771D1CFF765600B353FB /* LaunchScreen.storyboard */,
 				7AA677201CFF765600B353FB /* Info.plist */,
+				34A3E10E1E7A7303006916A8 /* GoogleService-Info.plist */,
 			);
 			path = AVCam;
+			sourceTree = "<group>";
+		};
+		EA8DB690FDBD98683E04D454 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07EC6DBE9156687B76A6205F /* Pods-AVCam.debug.xcconfig */,
+				F191CC149B40915834564458 /* Pods-AVCam.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AA677231CFF765600B353FB /* Build configuration list for PBXNativeTarget "AVCam" */;
 			buildPhases = (
+				9EF5EEB9F2D1D821A6917010 /* [CP] Check Pods Manifest.lock */,
 				7AA6770D1CFF765500B353FB /* Sources */,
 				7AA6770E1CFF765500B353FB /* Frameworks */,
 				7AA6770F1CFF765500B353FB /* Resources */,
+				2B00C7137F58DA036480249A /* [CP] Embed Pods Frameworks */,
+				BD28E6FC489D1F45BE77D780 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,11 +162,60 @@
 			files = (
 				7AA6771F1CFF765600B353FB /* LaunchScreen.storyboard in Resources */,
 				7AA6771C1CFF765600B353FB /* Assets.xcassets in Resources */,
+				34A3E10F1E7A7303006916A8 /* GoogleService-Info.plist in Resources */,
 				7AA6771A1CFF765600B353FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B00C7137F58DA036480249A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AVCam/Pods-AVCam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EF5EEB9F2D1D821A6917010 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BD28E6FC489D1F45BE77D780 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AVCam/Pods-AVCam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7AA6770D1CFF765500B353FB /* Sources */ = {
@@ -265,13 +342,14 @@
 		};
 		7AA677241CFF765600B353FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07EC6DBE9156687B76A6205F /* Pods-AVCam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 59NM25KMBA;
 				INFOPLIST_FILE = AVCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.resports.AVCam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.resports.devchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 3.0;
@@ -280,13 +358,14 @@
 		};
 		7AA677251CFF765600B353FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F191CC149B40915834564458 /* Pods-AVCam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 59NM25KMBA;
 				INFOPLIST_FILE = AVCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.resports.AVCam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.resports.devchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 3.0;

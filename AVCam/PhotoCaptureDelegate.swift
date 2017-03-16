@@ -10,6 +10,8 @@ import AVFoundation
 import Photos
 
 class PhotoCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
+    
+    
 	private(set) var requestedPhotoSettings: AVCapturePhotoSettings
 	
 	private let willCapturePhotoAnimation: () -> ()
