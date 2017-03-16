@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import Photos
+import FirebaseAuth
 
 class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
     
@@ -83,6 +84,17 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 			self.configureSession()
 		}
 	}
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        guard FIRAuth.auth()?.currentUser != nil else {
+            
+            performSegue(withIdentifier: "LoginVC", sender: nil)
+            return 
+        }
+    }
+    
+    
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)

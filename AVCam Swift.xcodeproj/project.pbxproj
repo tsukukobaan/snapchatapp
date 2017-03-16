@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		348788B31E7A884000DA06F9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348788B21E7A884000DA06F9 /* LoginVC.swift */; };
+		348788B61E7A8DE200DA06F9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348788B51E7A8DE200DA06F9 /* AuthService.swift */; };
 		34A3E10F1E7A7303006916A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34A3E10E1E7A7303006916A8 /* GoogleService-Info.plist */; };
+		34C003001E7A7D0100EED47A /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C002FF1E7A7D0100EED47A /* RoundTextField.swift */; };
+		34C003021E7A803E00EED47A /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C003011E7A803E00EED47A /* RoundedButton.swift */; };
 		7AA677151CFF765600B353FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA677141CFF765600B353FB /* AppDelegate.swift */; };
 		7AA677171CFF765600B353FB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA677161CFF765600B353FB /* CameraViewController.swift */; };
 		7AA6771A1CFF765600B353FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA677181CFF765600B353FB /* Main.storyboard */; };
@@ -21,7 +25,11 @@
 /* Begin PBXFileReference section */
 		07EC6DBE9156687B76A6205F /* Pods-AVCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AVCam/Pods-AVCam.debug.xcconfig"; sourceTree = "<group>"; };
 		2B68A9C3CA81B9C09A1164B0 /* Pods_AVCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		348788B21E7A884000DA06F9 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		348788B51E7A8DE200DA06F9 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		34A3E10E1E7A7303006916A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		34C002FF1E7A7D0100EED47A /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
+		34C003011E7A803E00EED47A /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		7AA677111CFF765600B353FB /* AVCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA677141CFF765600B353FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AA677161CFF765600B353FB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +54,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		348788B11E7A881E00DA06F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				348788B21E7A884000DA06F9 /* LoginVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		348788B41E7A8DD100DA06F9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				348788B51E7A8DE200DA06F9 /* AuthService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		34C002FE1E7A7CE700EED47A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34C002FF1E7A7D0100EED47A /* RoundTextField.swift */,
+				34C003011E7A803E00EED47A /* RoundedButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		7815AF80F7BC7228E93F59FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +108,9 @@
 		7AA677131CFF765600B353FB /* AVCam */ = {
 			isa = PBXGroup;
 			children = (
+				348788B41E7A8DD100DA06F9 /* Services */,
+				348788B11E7A881E00DA06F9 /* Controller */,
+				34C002FE1E7A7CE700EED47A /* View */,
 				7AA677141CFF765600B353FB /* AppDelegate.swift */,
 				7AA677281CFF7B5C00B353FB /* PreviewView.swift */,
 				7AA677161CFF765600B353FB /* CameraViewController.swift */,
@@ -223,9 +259,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AA677271CFF774800B353FB /* PhotoCaptureDelegate.swift in Sources */,
+				34C003021E7A803E00EED47A /* RoundedButton.swift in Sources */,
+				348788B31E7A884000DA06F9 /* LoginVC.swift in Sources */,
 				7AA677291CFF7B5C00B353FB /* PreviewView.swift in Sources */,
+				34C003001E7A7D0100EED47A /* RoundTextField.swift in Sources */,
 				7AA677171CFF765600B353FB /* CameraViewController.swift in Sources */,
 				7AA677151CFF765600B353FB /* AppDelegate.swift in Sources */,
+				348788B61E7A8DE200DA06F9 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

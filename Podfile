@@ -7,5 +7,7 @@ target 'AVCam' do
 
   # Pods for AVCam
   pod 'Firebase/Core'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Auth'
 
 end
