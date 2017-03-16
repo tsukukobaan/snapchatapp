@@ -8,20 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		345373701E7A25A90067F774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3453736F1E7A25A90067F774 /* AppDelegate.swift */; };
-		345373721E7A25A90067F774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345373711E7A25A90067F774 /* ViewController.swift */; };
+		345373721E7A25A90067F774 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345373711E7A25A90067F774 /* CameraVC.swift */; };
 		345373751E7A25A90067F774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345373731E7A25A90067F774 /* Main.storyboard */; };
 		345373771E7A25A90067F774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345373761E7A25A90067F774 /* Assets.xcassets */; };
 		3453737A1E7A25A90067F774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345373781E7A25A90067F774 /* LaunchScreen.storyboard */; };
+		345373861E7A279F0067F774 /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345373831E7A279F0067F774 /* AVCamPreviewView.m */; };
+		345373871E7A279F0067F774 /* AVCamCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345373851E7A279F0067F774 /* AVCamCameraViewController.m */; };
+		3453738C1E7A28660067F774 /* AVCamAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3453738B1E7A28660067F774 /* AVCamAppDelegate.m */; };
+		3453738F1E7A28720067F774 /* AVCamPhotoCaptureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3453738E1E7A28720067F774 /* AVCamPhotoCaptureDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3453736C1E7A25A90067F774 /* Devchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3453736F1E7A25A90067F774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		345373711E7A25A90067F774 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		345373711E7A25A90067F774 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		345373741E7A25A90067F774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		345373761E7A25A90067F774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		345373791E7A25A90067F774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3453737B1E7A25A90067F774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		345373811E7A279E0067F774 /* Devchat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Devchat-Bridging-Header.h"; sourceTree = "<group>"; };
+		345373821E7A279F0067F774 /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
+		345373831E7A279F0067F774 /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
+		345373841E7A279F0067F774 /* AVCamCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamCameraViewController.h; sourceTree = "<group>"; };
+		345373851E7A279F0067F774 /* AVCamCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamCameraViewController.m; sourceTree = "<group>"; };
+		3453738A1E7A28660067F774 /* AVCamAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamAppDelegate.h; sourceTree = "<group>"; };
+		3453738B1E7A28660067F774 /* AVCamAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamAppDelegate.m; sourceTree = "<group>"; };
+		3453738D1E7A28720067F774 /* AVCamPhotoCaptureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPhotoCaptureDelegate.h; sourceTree = "<group>"; };
+		3453738E1E7A28720067F774 /* AVCamPhotoCaptureDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPhotoCaptureDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +67,47 @@
 		3453736E1E7A25A90067F774 /* Devchat */ = {
 			isa = PBXGroup;
 			children = (
+				345373901E7A28780067F774 /* Supporting files */,
+				345373891E7A27BA0067F774 /* Controllers */,
+				345373881E7A27AA0067F774 /* View */,
 				3453736F1E7A25A90067F774 /* AppDelegate.swift */,
-				345373711E7A25A90067F774 /* ViewController.swift */,
 				345373731E7A25A90067F774 /* Main.storyboard */,
 				345373761E7A25A90067F774 /* Assets.xcassets */,
 				345373781E7A25A90067F774 /* LaunchScreen.storyboard */,
 				3453737B1E7A25A90067F774 /* Info.plist */,
+				345373811E7A279E0067F774 /* Devchat-Bridging-Header.h */,
 			);
 			path = Devchat;
+			sourceTree = "<group>";
+		};
+		345373881E7A27AA0067F774 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				345373821E7A279F0067F774 /* AVCamPreviewView.h */,
+				345373831E7A279F0067F774 /* AVCamPreviewView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		345373891E7A27BA0067F774 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				345373841E7A279F0067F774 /* AVCamCameraViewController.h */,
+				345373851E7A279F0067F774 /* AVCamCameraViewController.m */,
+				345373711E7A25A90067F774 /* CameraVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		345373901E7A28780067F774 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				3453738A1E7A28660067F774 /* AVCamAppDelegate.h */,
+				3453738B1E7A28660067F774 /* AVCamAppDelegate.m */,
+				3453738D1E7A28720067F774 /* AVCamPhotoCaptureDelegate.h */,
+				3453738E1E7A28720067F774 /* AVCamPhotoCaptureDelegate.m */,
+			);
+			name = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +143,7 @@
 					3453736B1E7A25A90067F774 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = Y94U73RFC7;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,8 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				345373721E7A25A90067F774 /* ViewController.swift in Sources */,
+				345373721E7A25A90067F774 /* CameraVC.swift in Sources */,
 				345373701E7A25A90067F774 /* AppDelegate.swift in Sources */,
+				345373871E7A279F0067F774 /* AVCamCameraViewController.m in Sources */,
+				345373861E7A279F0067F774 /* AVCamPreviewView.m in Sources */,
+				3453738C1E7A28660067F774 /* AVCamAppDelegate.m in Sources */,
+				3453738F1E7A28720067F774 /* AVCamPhotoCaptureDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,11 +310,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y94U73RFC7;
 				INFOPLIST_FILE = Devchat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.resports.Devchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Devchat/Devchat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,11 +326,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y94U73RFC7;
 				INFOPLIST_FILE = Devchat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.resports.Devchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Devchat/Devchat-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
