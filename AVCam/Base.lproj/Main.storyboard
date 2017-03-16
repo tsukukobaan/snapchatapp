@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OMe-cm-Nyb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -147,6 +148,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGb-aB-BfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73" y="-630"/>
+        </scene>
+        <!--UsersVC-->
+        <scene sceneID="1Jr-n0-gxb">
+            <objects>
+                <viewController id="OMe-cm-Nyb" customClass="UsersVC" customModule="AVCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VlA-rh-LyI"/>
+                        <viewControllerLayoutGuide type="bottom" id="5yd-C3-eRI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tfd-Kp-Bpd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RBv-52-iBq">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="TIG-Do-uIV" customClass="UserCell" customModule="AVCam" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TIG-Do-uIV" id="ILc-X1-qMO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jonbon22dick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wc-J8-Xtu">
+                                                    <rect key="frame" x="16" y="9" width="200" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="CIi-pV-vnr"/>
+                                                        <constraint firstAttribute="height" constant="24" id="awC-nu-jLe"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6Wc-J8-Xtu" firstAttribute="leading" secondItem="ILc-X1-qMO" secondAttribute="leadingMargin" constant="8" id="Awe-Hp-dGY"/>
+                                                <constraint firstItem="6Wc-J8-Xtu" firstAttribute="centerY" secondItem="ILc-X1-qMO" secondAttribute="centerY" id="puR-4A-7Zg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="firstNameLbl" destination="6Wc-J8-Xtu" id="Xng-gF-VcA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KmD-XL-ol2">
+                                <rect key="frame" x="0.0" y="26" width="375" height="44"/>
+                                <color key="barTintColor" red="0.28627450980000002" green="0.4039215686" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KmD-XL-ol2" secondAttribute="trailing" id="00o-mK-Ycb"/>
+                            <constraint firstItem="5yd-C3-eRI" firstAttribute="top" secondItem="RBv-52-iBq" secondAttribute="bottom" id="9yl-vQ-0ON"/>
+                            <constraint firstItem="RBv-52-iBq" firstAttribute="leading" secondItem="Tfd-Kp-Bpd" secondAttribute="leading" id="DaQ-ml-1Y5"/>
+                            <constraint firstItem="KmD-XL-ol2" firstAttribute="leading" secondItem="Tfd-Kp-Bpd" secondAttribute="leading" id="KjK-WP-BgI"/>
+                            <constraint firstItem="KmD-XL-ol2" firstAttribute="top" secondItem="VlA-rh-LyI" secondAttribute="bottom" constant="6" id="dQe-JV-fPE"/>
+                            <constraint firstAttribute="trailing" secondItem="RBv-52-iBq" secondAttribute="trailing" id="fu6-8D-5lZ"/>
+                            <constraint firstItem="RBv-52-iBq" firstAttribute="top" secondItem="KmD-XL-ol2" secondAttribute="bottom" id="zB9-73-aXg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="RBv-52-iBq" id="TMT-Fb-EAe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C0e-qc-6vF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869.60000000000002" y="-630.13493253373315"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">

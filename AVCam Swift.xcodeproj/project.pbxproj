@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		345AF95F1E7A9E77002E804F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345AF95E1E7A9E77002E804F /* DataService.swift */; };
+		345AF9611E7AA399002E804F /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345AF9601E7AA399002E804F /* UsersVC.swift */; };
+		345AF9631E7AA48F002E804F /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345AF9621E7AA48F002E804F /* UserCell.swift */; };
+		345AF9651E7AA78D002E804F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345AF9641E7AA78D002E804F /* User.swift */; };
+		345AF9671E7AB29D002E804F /* CameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345AF9661E7AB29D002E804F /* CameraVCDelegate.swift */; };
 		348788B31E7A884000DA06F9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348788B21E7A884000DA06F9 /* LoginVC.swift */; };
 		348788B61E7A8DE200DA06F9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348788B51E7A8DE200DA06F9 /* AuthService.swift */; };
 		34A3E10F1E7A7303006916A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34A3E10E1E7A7303006916A8 /* GoogleService-Info.plist */; };
@@ -25,6 +30,11 @@
 /* Begin PBXFileReference section */
 		07EC6DBE9156687B76A6205F /* Pods-AVCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AVCam/Pods-AVCam.debug.xcconfig"; sourceTree = "<group>"; };
 		2B68A9C3CA81B9C09A1164B0 /* Pods_AVCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		345AF95E1E7A9E77002E804F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		345AF9601E7AA399002E804F /* UsersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
+		345AF9621E7AA48F002E804F /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		345AF9641E7AA78D002E804F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		345AF9661E7AB29D002E804F /* CameraVCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVCDelegate.swift; sourceTree = "<group>"; };
 		348788B21E7A884000DA06F9 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		348788B51E7A8DE200DA06F9 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		34A3E10E1E7A7303006916A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -58,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				348788B21E7A884000DA06F9 /* LoginVC.swift */,
+				7AA677161CFF765600B353FB /* CameraViewController.swift */,
+				345AF9601E7AA399002E804F /* UsersVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -66,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				348788B51E7A8DE200DA06F9 /* AuthService.swift */,
+				345AF95E1E7A9E77002E804F /* DataService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -75,6 +88,8 @@
 			children = (
 				34C002FF1E7A7D0100EED47A /* RoundTextField.swift */,
 				34C003011E7A803E00EED47A /* RoundedButton.swift */,
+				7AA677281CFF7B5C00B353FB /* PreviewView.swift */,
+				345AF9621E7AA48F002E804F /* UserCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -108,18 +123,18 @@
 		7AA677131CFF765600B353FB /* AVCam */ = {
 			isa = PBXGroup;
 			children = (
+				345AF9661E7AB29D002E804F /* CameraVCDelegate.swift */,
 				348788B41E7A8DD100DA06F9 /* Services */,
 				348788B11E7A881E00DA06F9 /* Controller */,
 				34C002FE1E7A7CE700EED47A /* View */,
 				7AA677141CFF765600B353FB /* AppDelegate.swift */,
-				7AA677281CFF7B5C00B353FB /* PreviewView.swift */,
-				7AA677161CFF765600B353FB /* CameraViewController.swift */,
 				7AA677261CFF774800B353FB /* PhotoCaptureDelegate.swift */,
 				7AA677181CFF765600B353FB /* Main.storyboard */,
 				7AA6771B1CFF765600B353FB /* Assets.xcassets */,
 				7AA6771D1CFF765600B353FB /* LaunchScreen.storyboard */,
 				7AA677201CFF765600B353FB /* Info.plist */,
 				34A3E10E1E7A7303006916A8 /* GoogleService-Info.plist */,
+				345AF9641E7AA78D002E804F /* User.swift */,
 			);
 			path = AVCam;
 			sourceTree = "<group>";
@@ -258,14 +273,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				345AF95F1E7A9E77002E804F /* DataService.swift in Sources */,
 				7AA677271CFF774800B353FB /* PhotoCaptureDelegate.swift in Sources */,
 				34C003021E7A803E00EED47A /* RoundedButton.swift in Sources */,
 				348788B31E7A884000DA06F9 /* LoginVC.swift in Sources */,
 				7AA677291CFF7B5C00B353FB /* PreviewView.swift in Sources */,
+				345AF9611E7AA399002E804F /* UsersVC.swift in Sources */,
 				34C003001E7A7D0100EED47A /* RoundTextField.swift in Sources */,
 				7AA677171CFF765600B353FB /* CameraViewController.swift in Sources */,
+				345AF9651E7AA78D002E804F /* User.swift in Sources */,
 				7AA677151CFF765600B353FB /* AppDelegate.swift in Sources */,
+				345AF9631E7AA48F002E804F /* UserCell.swift in Sources */,
 				348788B61E7A8DE200DA06F9 /* AuthService.swift in Sources */,
+				345AF9671E7AB29D002E804F /* CameraVCDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

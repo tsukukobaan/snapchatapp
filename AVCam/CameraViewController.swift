@@ -11,7 +11,7 @@ import AVFoundation
 import Photos
 import FirebaseAuth
 
-class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
+class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelegate, CameraVCDelegate {
     
     
     @IBOutlet private weak var previewView: PreviewView!
@@ -34,6 +34,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 		photoButton.isEnabled = false
 		livePhotoModeButton.isEnabled = false
 		captureModeControl.isEnabled = false
+        
 		
 		// Set up the video preview view.
 		previewView.session = session
@@ -87,13 +88,13 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
     
     override func viewDidAppear(_ animated: Bool) {
         
-        //performSegue(withIdentifier: "LoginVC", sender: nil)
+        performSegue(withIdentifier: "LoginVC", sender: nil)
         
-        guard FIRAuth.auth()?.currentUser != nil else {
-            
-            performSegue(withIdentifier: "LoginVC", sender: nil)
-            return 
-        }
+//        guard FIRAuth.auth()?.currentUser != nil else {
+//            
+//            performSegue(withIdentifier: "LoginVC", sender: nil)
+//            return 
+//        }
     }
     
     
@@ -737,32 +738,36 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 		if error != nil {
 			print("Movie file finishing error: \(error)")
 			success = (((error as NSError).userInfo[AVErrorRecordingSuccessfullyFinishedKey] as AnyObject).boolValue)!
+            videoRecordingFailed()
 		}
 		
 		if success {
+            
+            videoRecordingComplete(videoURL: outputFileURL)
 			// Check authorization status.
-			PHPhotoLibrary.requestAuthorization { status in
-				if status == .authorized {
-					// Save the movie file to the photo library and cleanup.
-					PHPhotoLibrary.shared().performChanges({
-							let options = PHAssetResourceCreationOptions()
-							options.shouldMoveFile = true
-							let creationRequest = PHAssetCreationRequest.forAsset()
-							creationRequest.addResource(with: .video, fileURL: outputFileURL, options: options)
-						}, completionHandler: { success, error in
-							if !success {
-								print("Could not save movie to photo library: \(error)")
-							}
-							cleanup()
-						}
-					)
-				}
-				else {
-					cleanup()
-				}
-			}
+//			PHPhotoLibrary.requestAuthorization { status in
+//				if status == .authorized {
+//					// Save the movie file to the photo library and cleanup.
+//					PHPhotoLibrary.shared().performChanges({
+//							let options = PHAssetResourceCreationOptions()
+//							options.shouldMoveFile = true
+//							let creationRequest = PHAssetCreationRequest.forAsset()
+//							creationRequest.addResource(with: .video, fileURL: outputFileURL, options: options)
+//						}, completionHandler: { success, error in
+//							if !success {
+//								print("Could not save movie to photo library: \(error)")
+//							}
+//							cleanup()
+//						}
+//					)
+//				}
+//				else {
+//					cleanup()
+//				}
+//			}
 		}
 		else {
+            videoRecordingFailed()
 			cleanup()
 		}
 		
@@ -958,4 +963,6 @@ extension AVCaptureDeviceDiscoverySession {
 		
 		return uniqueDevicePositions.count
 	}
+    
+    
 }
